@@ -24,12 +24,12 @@ export class PokeAPI {
         return shallowLocations;
     }
 
-    // async fetchLocation(locationName: string): Promise<Location> {
-    //     const locationURL: string = `${PokeAPI.baseURL}/location-area/${locationName}`;
-    //     const response = await fetch(locationURL);
-    //     const locations = response.json();
-    //     return locations;
-    // }
+    async fetchLocation(locationName: string): Promise<Location> {
+        const locationURL: string = `${PokeAPI.baseURL}/location-area/${locationName}`;
+        const response = await fetch(locationURL);
+        const locations = response.json();
+        return locations;
+    }
 
 };
 

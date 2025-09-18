@@ -1,6 +1,6 @@
 import { type State } from "./state.js";
 
-export function startREPL(state: State): void{
+export async function startREPL(state: State) {
 
     state.readline.prompt();
 

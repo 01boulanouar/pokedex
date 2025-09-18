@@ -25,21 +25,13 @@ export function initState(): State {
         prompt: "Pokedex > ",
     });
 
-    const commands = getCommands();
-
-    const pokeapi = new PokeAPI();
-
-    const offset = 0;
-    const nextLocationsURL = "";
-    const prevLocationURL = "";
-
     return { 
         readline,
-        commands,
-        pokeapi,
-        offset,
-        nextLocationsURL,
-        prevLocationURL,
+        commands: getCommands(),
+        pokeapi: new PokeAPI(),
+        offset: 0,
+        nextLocationsURL: "",
+        prevLocationURL: "",
     };
 }
 

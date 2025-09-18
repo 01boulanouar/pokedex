@@ -22,8 +22,8 @@ export default function getCommands(): Record<string, CLICommand> {
             callback: commandMap,
         },
         mapb: {
-            name: "map",
-            description: "Displaysthe next 20 locations",
+            name: "mapb",
+            description: "Displaysthe previous 20 locations",
             callback: commandMapb,
         }
     };
