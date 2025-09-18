@@ -42,5 +42,10 @@ export class Cache {
     get<T>(key: string) {
         return this.#cache.get(key)?.val;
     }
+
+    has<T>(key: string)
+    {
+        return this.#cache.has(key);
+    }
 };
 
