@@ -40,7 +40,7 @@ export class Cache {
     })}
 
     get<T>(key: string) {
-        return this.#cache.get(key)?.val;
+        return this.#cache.get(key)?.val as T;
     }
 
     has<T>(key: string)

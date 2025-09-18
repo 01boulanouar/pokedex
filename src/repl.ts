@@ -5,14 +5,13 @@ export async function startREPL(state: State) {
     state.readline.prompt();
 
     state.readline.on("line", async (line) => {
-        const words = cleanInput(line);
-        const command = words[0];
+        const [command, ...args] = cleanInput(line);
 
-        if (words.length !== 0)
+        if (command.length !== 0)
         {
             if (command in state.commands) {
                 try {
-                    await state.commands[command].callback(state);
+                    await state.commands[command].callback(state, ...args);
                 } catch (err)
                 {
                     if (err instanceof Error)
