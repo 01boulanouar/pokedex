@@ -7,7 +7,7 @@ export function startREPL(state: State): void {
     state.readline.on("line", (line) => {
         const words = cleanInput(line);
         const command = words[0];
- 
+
         if (words.length !== 0)
         {
             if (command in state.commands)

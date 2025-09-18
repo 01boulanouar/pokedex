@@ -1,6 +1,5 @@
 import { createInterface, type Interface } from "readline";
-import commandExit from "./command_exit.js";
-import commandHelp from "./command_help.js";
+import getCommands from "./commands.js";
 
 export type CLICommand = {
     name: string;
@@ -21,18 +20,8 @@ export function initState(): State {
         prompt: "Pokedex > ",
     });
 
-    const commands = {
-        help: {
-            name: "help",
-            description: "Displays a help message",
-            callback: commandHelp,
-        },
-        exit: {
-            name: "exit",
-            description: "Exits the pokedex",
-            callback: commandExit,
-        },
-    };
+    const commands = getCommands();
+
     return { readline, commands };
 }
 
