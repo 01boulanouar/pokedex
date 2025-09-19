@@ -14,7 +14,7 @@ export default async function commandCatch(state: State, ...args: string[]) {
     if (chance > pokemon.base_experience)
     {
         state.pokedex[pokemon.name] = pokemon;
-         console.log(`Caught ${args[0]}!`);
+         console.log(`${args[0]} was caught!`);
     }
     else
         console.log("Try again :(");
