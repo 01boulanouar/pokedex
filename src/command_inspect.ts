@@ -21,6 +21,5 @@ export default async function commandInspect(state: State, ...args: string[]) {
         console.log(`Types:`);
          for (const type of pokemon.types)
             console.log(` - ${type.type.name}`);
-
     }
 }
