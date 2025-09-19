@@ -1,7 +1,7 @@
 import { type State } from "./state.js";
 
 
-export async function commandMap(state: State): Promise<void> {
+export async function commandMap(state: State) {
     const shallowLocations = await state.pokeapi.fetchLocations(state.offset);
     state.nextLocationsURL = shallowLocations.next;
     state.prevLocationURL = shallowLocations.previous;
@@ -10,7 +10,7 @@ export async function commandMap(state: State): Promise<void> {
         console.log(location.name);
 };
 
-export async function commandMapb(state: State): Promise<void> {
+export async function commandMapb(state: State) {
     const shallowLocations = await state.pokeapi.fetchLocations(state.offset);
     state.nextLocationsURL = shallowLocations.next;
     state.prevLocationURL = shallowLocations.previous;

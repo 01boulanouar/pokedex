@@ -7,7 +7,7 @@ export async function startREPL(state: State) {
     state.readline.on("line", async (line) => {
         const [command, ...args] = cleanInput(line);
 
-        if (command.length !== 0)
+        if (command && command.length !== 0)
         {
             if (command in state.commands) {
                 try {
